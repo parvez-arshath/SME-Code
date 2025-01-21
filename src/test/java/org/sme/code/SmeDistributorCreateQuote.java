@@ -148,6 +148,7 @@ public class SmeDistributorCreateQuote extends BaseClass {
 	@Then("User should validate the total premium for the created qoute")
 	public void user_should_validate_the_total_premium_for_the_created_qoute() throws SQLException, IOException {
 
+		System.out.println("queryAIAWBasePremium");
 		// base premium
 		fetchDataFromDatabase(calculatorData().getProperty("dbUrlUAT"), calculatorData().getProperty("dbUsernameUAT"),
 				calculatorData().getProperty("dbPasswordUAT"), calculatorData().getProperty("queryAIAWBasePremium"),

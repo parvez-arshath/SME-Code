@@ -200,7 +200,6 @@ public class BaseClass {
 			Workbook workbook = new XSSFWorkbook(fileInputStream);
 			Sheet sheet = workbook.getSheetAt(sheetNum); // Modify index if needed
 
-			// Remove existing rows except the first row
 			int lastRow = sheet.getLastRowNum();
 			for (int i = 1; i <= lastRow; i++) {
 				Row row = sheet.getRow(i);
@@ -291,9 +290,9 @@ public class BaseClass {
 			int lastRow = targetSheet.getLastRowNum();
 			for (int i = 1; i <= lastRow; i++) {
 				Row row = targetSheet.getRow(i);
-				if (row != null) {
-					targetSheet.removeRow(row);
-				}
+				/*
+				 * if (row != null) { targetSheet.removeRow(row); }
+				 */
 			}
 
 // Copy data from source sheet to target sheet
